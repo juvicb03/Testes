@@ -1,5 +1,9 @@
 package br.edu.utfpr.pb.tdd.server;
 
+import br.edu.utfpr.pb.tdd.server.controller.UserController;
+import br.edu.utfpr.pb.tdd.server.model.User;
+import br.edu.utfpr.pb.tdd.server.repository.UserRepository;
+import br.edu.utfpr.pb.tdd.server.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,10 +25,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-// @WebMvcTest(controllers = UserController.class)
+@WebMvcTest(controllers = UserController.class)
 @AutoConfigureMockMvc(addFilters = false)
 public class UserControllerUnitTest {
-    /*
+
     public static final String URL_USERS = "/users";
     @Autowired
     MockMvc mvc;
@@ -50,7 +54,7 @@ public class UserControllerUnitTest {
         mvc
             .perform(request)
             .andExpect( status().isOk() )
-            .andExpect( jsonPath("message").value("Registro salvo.") );
+            .andExpect( jsonPath("message").value("Salvo com sucesso!") );
     }
 
     private User createValidUser() {
@@ -59,6 +63,6 @@ public class UserControllerUnitTest {
                     .displayName("test-display")
                     .password("P4ssword").build();
     }
-     */
+
 
 }

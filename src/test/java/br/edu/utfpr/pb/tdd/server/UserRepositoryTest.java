@@ -1,5 +1,7 @@
 package br.edu.utfpr.pb.tdd.server;
 
+import br.edu.utfpr.pb.tdd.server.model.User;
+import br.edu.utfpr.pb.tdd.server.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -11,8 +13,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @DataJpaTest
 @ActiveProfiles("test")
 public class UserRepositoryTest {
-}
-/*
+
     @Autowired
     TestEntityManager testEntityManager;
     @Autowired
@@ -37,4 +38,4 @@ public class UserRepositoryTest {
     }
 
 }
-*/
+
